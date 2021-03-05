@@ -1,0 +1,170 @@
+:root {
+  --blue: #92beff;
+  --indigo: #6610f2;
+  --purple: #5f063e;
+  --pink: #ff9999;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --dark-brown: #1d1606;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #efdcbc91;
+  --primary-two: #efdcbc;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+
+body {
+  background-color: var(--primary);
+  font-family: var(--font-family-monospace);
+  align-items: center;
+  align-content: center;
+  text-align: center;
+}
+
+#logo {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  border: 4px solid salmon;
+}
+
+a {
+  color: black;
+  font-weight: light;
+  text-decoration: none;
+  margin: 20px;
+  font-family: var(--font-family-sans-serif);
+}
+
+#menu-wrapper {
+  display: inline-flex;
+  grid-template-columns: 3, 1fr;
+  align-items: center;
+  text-align: center;
+  align-content: space-between;
+  justify-content: space-around;
+  grid-row-gap: 1px;
+}
+.menu-item {
+  position: relative;
+}
+
+#main {
+  /* width: 80%; */
+  align-items: center;
+  align-content: center;
+  margin: 20px;
+  position: relative;
+}
+
+#main-wrapper {
+  /* width: 100%; */
+  display: grid;
+  grid-template-columns: 70% 1fr;
+  grid-auto-rows: 600px;
+  align-items: center;
+  text-align: center;
+  align-content: space-between;
+  justify-content: space-around;
+  grid-row-gap: 1px;
+}
+.main-item {
+  position: relative;
+}
+.main-item .thumbnail {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.thumbnail-overlay {
+  position: relative;
+  background-color: var(--primary-two);
+  border: 10px solid var(--primary-two);
+  width: 100%;
+  height: 400px;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 10;
+  /* opacity: 0.5; */
+  /* vertical-align: middle; */
+
+}
+#thumbnail-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 35%;
+  transform: translate(-50%,-50%);
+
+}
+.main-item .projects {
+  grid-column-start: 5;
+  grid-column-end: 6;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  overflow-y: scroll;
+}
+ul {
+  text-align: center;
+  width: 100%;
+  height: 500px;
+  overflow-y: scroll;
+  padding: 0px;
+}
+li {
+  list-style-type: none;
+  margin: 30px;
+}
+
+li.project:first-child {
+    list-style-type: none;
+    margin-top: 1px !important;
+  }
+::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar space */
+  background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+.project{
+    padding-top: 10px;
+}
+.project-item{
+    font-size: larger;
+}
+.project-item-tag{
+    font-size: small;
+    padding-top: 5px;
+    font-weight: bold;
+    /*width: 80%;
+    position: absolute;
+    left: 0; */
+}
+
+i{
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
